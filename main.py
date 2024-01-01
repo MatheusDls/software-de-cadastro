@@ -48,7 +48,8 @@ class Application():
         ## Criação do botão Ajuda 
         self.bt_ajuda = Button(self.frame_1, text="AJUDA")
         self.bt_ajuda.place(relx=0.3, rely=0.0, relwidth=0.1, relheight=0.10)
-    
+        
+        ## definindo função de click ao botão (Incluir Cadastro)
     def mostrar_label(self):
         novo_label = Label(self.frame_1, text = "Código")
         novo_label.place(relx = 0.0, rely = 0.13)
