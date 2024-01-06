@@ -32,6 +32,7 @@ class Application():
         self.frame_2 = Frame(self.root, bd=4, bg='#eeeeee', highlightbackground='#0000FF', highlightthickness=3)
         self.frame_2.place(relx=0.01, rely=0.4, relwidth=0.98, relheight=0.49)
     
+
     def widgets_frame1(self):
         ## Criação do botão Incluir 
         self.bt_Incluir_Cadastro = Button(self.frame_1, text="INCLUIR CADASTRO", command=self.mostrar_label)
@@ -51,13 +52,57 @@ class Application():
         
         ## definindo função de click ao botão (Incluir Cadastro)
     def mostrar_label(self):
-        novo_label = Label(self.frame_1, text = "Código")
-        novo_label.place(relx = 0.0, rely = 0.13)
+        #Configuração label Código
+        novo_label_0 = Label(self.frame_1, text = "Código")
+        novo_label_0.place(relx = 0.0, rely = 0.13)
 
         self.codigo_entry = Entry(self.frame_1)
-        self.codigo_entry.place(relx=0.05, rely=0.14, relwidth=0.05)
+        self.codigo_entry.place(relx=0.05, rely=0.13, relwidth=0.05)
+       
+        # Configuração label Razão Social
+        novo_label_1 = Label(self.frame_1, text = "Razão Social")
+        novo_label_1.place(relx = 0.00, rely = 0.2)
+
+        self.razao_entry = Entry(self.frame_1)
+        self.razao_entry.place(relx=0.07, rely=0.20, relwidth=0.15)
+
+        # Configuração label CNPJ
+        novo_label_2 = Label(self.frame_1, text = "Cnpj")
+        novo_label_2.place(relx = 0.0, rely = 0.27)
+
+        self.cnpj_entry = Entry(self.frame_1)
+        self.cnpj_entry.place(relx=0.04, rely=0.27, relwidth=0.15)
+
+        # Configuração Dados DO Relogio
+        novo_label_3 = Label(self.frame_1, text = "DADOS DO RELOGIO")
+        novo_label_3.place(relx = 0.00, rely = 0.36)
+
+        # Configuração Modelo
+        novo_label_4 = Label(self.frame_1, text = "Modelo")
+        novo_label_4.place(relx = 0.00, rely = 0.45)
         
-        ## Configuração de colunas na treeviewer
+        self.modelo_entry = Entry(self.frame_1)
+        self.modelo_entry.place(relx=0.05, rely=0.45, relwidth=0.15)
+
+        # Configuração Serial
+        novo_label_5 = Label(self.frame_1, text = "Serial")
+        novo_label_5.place(relx = 0.00, rely = 0.52)
+        
+        self.serial_entry = Entry(self.frame_1)
+        self.serial_entry.place(relx=0.04, rely=0.52, relwidth=0.15)
+
+        # Configuração (Inicio da manutenção)
+        novo_label_6 = Label(self.frame_1, text = "Data de inicio")
+        novo_label_6.place(relx = 0.00, rely = 0.60)
+        
+        self.data_inicio = Entry(self.frame_1)
+        self.data_inicio.place(relx=0.07, rely=0.60, relwidth=0.10)
+
+
+
+
+
+       ## Configuração de colunas na treeviewer
     def lista_frame2(self):
         self.listaCli = ttk.Treeview(self.frame_2, height= 3, column=("col1", "col2", "col3", "col4"))
         self.listaCli.heading("#0", text="")
